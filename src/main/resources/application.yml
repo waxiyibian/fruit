@@ -1,0 +1,37 @@
+server:
+  servlet:
+    context-path: /
+logging:
+  level:
+    org:
+      springframework:
+        security: info
+spring:
+  mvc:
+    view:
+      prefix: /
+      suffix: .html
+  datasource:
+    # driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password:
+    url: jdbc:mysql://localhost:3306/fruit?serverTimeZone=UTC&useUnicode=true&characterEncoding=utf8&useSSL=true
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  # JavaMailSender 邮件发送的配置
+  mail:
+    host: smtp.163.com
+    username: ljy17328@163.com
+    password: RMVNEXYCCKMTQRRO
+    default-encoding: UTF-8
+    properties: 
+      mail:
+        smtp:
+          auth: true
+          starttls: 
+            enable: true
+            required: true
+
+
